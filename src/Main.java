@@ -26,7 +26,7 @@ public class Main {
         int remainingHeightInInches = scanner.nextInt();
         double convertedHeight = convertToCentimeters(heightInFeet, remainingHeightInInches);
 
-        System.out.println("Converted height: " + convertedHeight);
+        System.out.println("Converted height: " + convertedHeight + "cm");
 
 
 

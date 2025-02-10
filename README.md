@@ -1,14 +1,16 @@
-# Height to Centimeters Converter
+# Height Converter (Feet and Inches to Centimeters)
 
-This Java project demonstrates how to convert a height given in inches to centimeters.
+This Java project demonstrates how to convert a height given in feet and inches to centimeters using method overloading.
 
 ## Description
 
-The program defines two methods:
+The program defines two overloaded methods:
 
-*   `convertToCentimeters(int height)`: This method takes a height in inches as an integer (`int`) and returns the equivalent height in centimeters as a floating-point number (`double`). The conversion is done by multiplying the height in inches by 2.54 (1 inch = 2.54 centimeters).
+*   `convertToCentimeters(int heightInInches)`: This method takes a height in inches as an integer (`int`) and returns the equivalent height in centimeters as a double (`double`). The conversion is done by multiplying the height in inches by 2.54 (1 inch = 2.54 centimeters).
 
-*   `main(String[] args)`: This is the main method of the program. It declares a variable `heightInInches` that stores the height in inches. Then, it calls the `convertToCentimeters` method passing `heightInInches` as an argument and stores the result (the height in centimeters) in the variable `heightInCentimeters`. Finally, it prints to the console the original height in inches and the converted height in centimeters.
+*   `convertToCentimeters(int heightInFeet, int remainingHeightInInches)`: This overloaded method takes a height in feet and the remaining height in inches as integers (`int`). It first converts the height in feet to inches, adds the remaining inches, and then calls the first `convertToCentimeters` method (the one that takes only inches) to perform the final conversion to centimeters.  This demonstrates method overloading by having two methods with the same name but different parameters.
+
+*   `main(String[] args)`: This is the main method of the program. It uses a `Scanner` to get user input for the height in feet and the remaining height in inches. It then calls the overloaded `convertToCentimeters` method (the one that takes feet and inches) to perform the conversion. Finally, it prints the converted height in centimeters to the console.
 
 ## How to use
 
@@ -28,21 +30,27 @@ The program defines two methods:
     java Main
     ```
 
-    The program will print the following output to the console:
+    The program will prompt you to enter the height in feet and then the remaining height in inches. After you provide the input, it will print the converted height in centimeters.  Example interaction:
 
     ```
-    8 inches is equal to 20.32 centimeters.
+    Enter height in feet (a round value): 
+    5
+    Now enter the remaining value of height in inches: 
+    7
+    Converted height: 169.92
     ```
 
 ## Example
 
-If you want to convert a different height, just change the value of the `heightInInches` variable in the `main` method and run the program again.
+To convert a different height, simply run the program again and enter the new values when prompted.
 
 ## Notes
 
-*   This program assumes that the height provided as input is in inches.
+*   This program assumes that the height is provided in feet and inches.
 
 *   The conversion is done using the conversion factor 1 inch = 2.54 centimeters.
+
+*   This example demonstrates method overloading in Java.
 
 ## Contributions
 
